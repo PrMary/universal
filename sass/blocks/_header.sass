@@ -1,0 +1,169 @@
+.header
+  &-top
+    background-color: $light
+  &-upper
+    display: flex
+    justify-content: space-between
+    align-items: center   
+    height: 50px 
+    border-bottom: 1px solid $grey15 
+    &__left
+      display: flex
+      justify-content: flex-start
+    &__right
+      display: flex
+      justify-content: flex-end      
+  &-bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: $grey85
+    &__title
+      padding-left: 30px
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__img
+      width: 100px
+      height: 84px
+    &__text
+      margin-left: 15px      
+    &__info
+      display: flex
+      justify-content: space-between
+      align-items: center  
+    &__weather
+      margin-left: 64px  
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-navbar
+    background-color: $grey100
+  &-sections
+    padding: 15px 25px 15px 0   
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-right: 1px solid $grey15
+  &__search
+    width: 50%
+    flex-grow: 1
+    display: flex
+    justify-content: flex-start
+    padding-top: 15px
+    padding-left: 26px
+    padding-bottom: 15px 
+  &__subscribe
+    padding-top: 7px 
+    margin-right: 33px
+    display: flex
+    justify-content: space-between
+    align-items: center   
+  &__sign
+    padding-right: 0
+    padding-top: 15px   
+    padding-bottom: 15px
+    margin-left: 27px
+    display: flex
+    justify-content: space-between
+.search  
+  &__img
+    width: 18px
+    height: 18px
+    margin-right: 11px
+  &__input
+    width: 100%
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: $grey50
+.section
+  &__text
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+    color: $grey100
+  &-button
+    width: 18px
+    height: 14px
+    padding: 0
+    margin-right: 16px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-direction: column
+    background-color: transparent
+    &__line
+      width: 18px
+      height: 1px
+      background-color: $grey30
+      &-short
+        width: 12px              
+.subscribe
+  &__img
+    width: 66px
+    height: 44px 
+    margin-right: 13px
+  &-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between  
+  &__text
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+  &__price
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: $grey50
+.sign
+  &__img
+    width: 16px
+    height: 18px
+    margin-right: 12px
+  &__text
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: $grey85
+.logo
+  width: 184px
+  height: 81px    
+.weather
+  &__img
+    width: 18px
+    height: 18px
+  &__degree
+    margin-left: 10px
+
+.navbar
+  &-menu
+    list-style: none
+    margin: 0
+    padding: 18px 0
+    display: flex
+    justify-content: space-between
+    align-items: center  
+    &__item
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      color: $light
+    &__link
+      text-decoration: none
+      color: inherit
+      border-bottom: 1px solid transparent
+      &:hover
+        border-bottom: 1px solid $light
+
