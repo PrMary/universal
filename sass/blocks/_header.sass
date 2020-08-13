@@ -1,4 +1,6 @@
 .header
+  &__logo
+    display: block
   &-top
     background-color: $light
   &-upper
@@ -43,12 +45,7 @@
     justify-content: space-between
     align-items: center
     border-right: 1px solid $grey15
-    &__text
-      font-style: normal
-      font-weight: bold
-      font-size: 14px
-      line-height: 20px
-      color: $grey100
+    
   &__search
     width: 50%
     flex-grow: 1
@@ -82,21 +79,31 @@
     color: $grey50
 .section
   &-button
-    width: 18px
-    height: 14px
-    padding: 0
-    margin-right: 16px
     display: flex
-    align-items: flex-start
     justify-content: space-between
-    flex-direction: column
+    align-items: center
     background-color: transparent
+    &__group
+      width: 18px
+      height: 14px
+      padding: 0
+      margin-right: 16px
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      flex-direction: column
     &__line
       width: 18px
       height: 1px
       background-color: $grey30
       &-short
-        width: 12px              
+        width: 12px     
+    &__text
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 20px
+      color: $grey100             
 .subscribe
   &-info
     display: flex
@@ -107,6 +114,7 @@
       font-weight: bold
       font-size: 12px
       line-height: 15px
+      color: $grey85
     &__price
       font-style: normal
       font-weight: normal
