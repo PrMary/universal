@@ -21,7 +21,40 @@
         margin-bottom: 0 
         font-size: 13px
         line-height: 18px
-       
+  .infobox
+    &-wrapper
+      height: 970px
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 30px
+    &__cars
+      grid-row: 1 / 3
+      grid-column: 1 / 3    
+    &__cat
+      grid-row: 3 / 5
+      grid-column: 1 / 2
+    &__art
+      grid-row: 3 / 5
+      grid-column: 2 / 3
+    &__coffee
+      grid-row: 5 / 6
+      grid-column: 1 / 2
+    &__stressful
+      grid-row: 5 / 6
+      grid-column: 3 / 4
+    &__manufacture
+      grid-row: 5 / 6
+      grid-column: 2 / 3
+    &__lemon
+      display: none  
+    &__columns
+      grid-row: 1 / 5
+      grid-column: 3 / 4    
+    &-cars
+      &__img
+        width: 48%
+      &__info
+        width: 50% 
 @media (max-width: 1005px)
   .container
     max-width: 800px  
@@ -110,7 +143,46 @@
     height: 450px 
   .content
     &-info
-      top: 50%                                
+      top: 50% 
+  .infobox
+    &-wrapper
+      height: 1400px
+      grid-template-rows: 1fr 1fr 1fr 1fr 150px 150px 170px
+      grid-template-columns: 1fr 1fr
+      grid-gap: 30px
+    &__cars
+      grid-row: 1 / 3
+      grid-column: 1 / 3    
+    &__cat
+      grid-row: 3 / 5
+      grid-column: 1 / 2
+    &__art
+      grid-row: 3 / 5
+      grid-column: 2 / 3
+    &__coffee
+      grid-row: 7 / 8
+      grid-column: 1 / 2
+    &__stressful
+      display: none
+    &__manufacture
+      grid-row: 7 / 8
+      grid-column: 2 / 3
+    &__columns
+      grid-row: 5 / 7
+      grid-column: 1 / 3 
+    &-columns
+      grid-template-areas: "title title title title title" "left article1 article2 article3 right" "footer footer footer footer footer"
+      grid-template-rows: 60px 1fr 45px
+      grid-template-columns: 24px 1fr 1fr 1fr 24px
+    &-cars
+      &__footer
+        justify-content: flex-start
+      &__excerpt  
+        flex-basis: 100%
+    &-columns
+      grid-gap: 10px
+      &__article
+        border-bottom: 1px solid transparent
 @media (max-width: 768px)
   .container
     max-width: 600px
@@ -182,6 +254,53 @@
   .player
     &__icon
       margin-left: 0
+  .infobox
+    &-wrapper
+      grid-gap: 15px
+      height: 1200px
+      grid-template-rows: 1fr 1fr 1fr 1fr 150px 150px 150px
+    &-cars
+      &__title
+        font-size: 20px
+        line-height: 25px
+      &__text
+        font-size: 12px
+        line-height: 15px  
+      &__img
+        height: 250px 
+    &-cat
+      &__title
+        padding: 10px 20px 20px
+        font-size: 14px
+        line-height: 20px
+    &-art
+      &__title
+        width: 98%
+        font-size: 14px
+        line-height: 20px
+      &__counters
+        display: none  
+    &-columns
+      grid-template-areas: "title title title title" "left article1 article2 right" "footer footer footer footer"
+      grid-template-rows: 50px 1fr 45px
+      grid-template-columns: 20px 1fr 1fr 20px    
+      &__article
+        padding-top: 25px
+        padding-bottom: 15px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &-three
+          display: none
+    &-item     
+      padding-top: 20px
+      &__title
+        font-size: 14px
+        line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 15px 
+        margin-bottom: 10px
   .modal
     &__video
       width: 440px
@@ -205,6 +324,37 @@
     &__video
       width: 400px
       height: 220px     
+@media (max-width: 430px)
+  .infobox
+    &-wrapper
+      height: 1150px
+      grid-template-rows: 1fr 1fr 1fr 1fr 150px 150px 150px
+    &-cars
+      &__info
+        padding-left: 25px
+      &__title
+        font-size: 18px
+        line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 15px  
+      &__img
+        height: 240px   
+      &__footer
+        padding-left: 25px      
+    &-columns   
+      &__article
+        padding-top: 20px
+        padding-bottom: 10px
+        padding-left: 0
+    &-item     
+      padding-top: 15px
+      &__text
+        margin-bottom: 0px
+      &__date  
+        margin-top: 0
+        font-size: 10px
+        line-height: 12px
 @media (max-width: 390px)  
   .recommended
     &__backcolor
