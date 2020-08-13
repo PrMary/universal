@@ -1,24 +1,83 @@
 .infobox
+  padding-top: 30px
   &-wrapper
     width: 100%
+    height: 770px
     display: grid
-  &-category
+    grid-template-rows: 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 30px
+  &__cars
+    grid-row: 1 / 3
+    grid-column: 1 / 3
+    
+  &__cat
+    grid-row: 3 / 5 
+    grid-column: 1 / 2
+  &__art
+    grid-row: span 2
+    grid-column: span 1
+  &__coffee
+    grid-row: 3 / 4
+    grid-column: 2 / 3
+  &__stressful
+    grid-row: 4 / 5
+    grid-column: 2 / 3
+  &__manufacture
+    grid-row: 3 / 4
+    grid-column: 3 / 4
+  &__lemon
+    grid-row: 4 / 5
+    grid-column: 3 / 4  
+  &__columns
+    grid-row: span 4
+    grid-column: 4 / 5      
+
+  &__category
     font-size: 12px
     line-height: 15px
     letter-spacing: 0.5px
     text-transform: uppercase
     color: $greyblue75
   &-cars
-    background: #FFFFFF
+    background: $light
     border-radius: 10px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-top: 15px
+    overflow: hidden
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      width: 263px
+      padding-top: 20px
+      padding-left: 35px
+    &__img
+      max-width: 292px
+      max-height: 299px
+      object-fit: cover       
+    &__footer
+      width: 100%  
+      height: 55px
+      border-top: 1px solid $grey15
+      padding-left: 35px
+      padding-right: 35px
+      display: flex
+      justify-content: space-between
+      align-items: center
     &__title
+      margin-top: 20px
+      margin-bottom: 0
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
       font-size: 25px
       line-height: 30px
-      color: $grey100
+      color: $grey100      
     &__text
+      padding-top: 25px
       font-style: normal
       font-weight: normal
       font-size: 14px
@@ -30,28 +89,65 @@
       object-fit: cover
       border-radius: 50%
     &__author
+      margin-left: 10px
+      font-weight: bold
       font-size: 14px
       line-height: 20px
       color: $grey100
+      text-decoration: none      
     &__excerpt
+      margin: 0
+      width: 296px
+      margin-left: 5px
       font-style: normal
       font-weight: normal
       font-size: 14px
       line-height: 20px
       color: $grey85
-      write-space: nowrap
+      white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
+    &__counter
+      display: flex
+      justify-content: space-between
+      align-items: center  
+    &__number
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $grey50
+      margin-left: 6px
   &-art
     border-radius: 10px
     overflow: hidden
+    position: relative
+    display: flex
+    align-items: flex-end
     &__img
       width: 100%
       height: 100%
       object-fit: cover
+      position: absolute
+      z-index: -2
     &:after
       content: ""
-      background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)) 
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
+    &__info
+      width: 100%
+      padding: 18px 35px 25px 25px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-start
     &__category  
       font-size: 12px
       line-height: 15px
@@ -59,6 +155,7 @@
       text-transform: uppercase
       color: $purple25
     &__title
+      width: 203px
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
@@ -67,12 +164,23 @@
       letter-spacing: 0.5px
       text-transform: uppercase
       color: $base
+    &__footer
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__right
+      width: 148px
+      margin-left: 10px  
+      display: flex
+      flex-direction: column
+      align-items: flex-start
     &__avatar
       width: 45px
       height: 45px
       border-radius: 50%
       object-fit: cover  
-    &__name
+    &__author
+      text-decoration: none
       font-style: normal
       font-weight: normal
       font-size: 14px
@@ -80,15 +188,23 @@
       color: $base
       mix-blend-mode: normal
       opacity: 0.85
+    &__counters
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center  
   &-cat
-    background: $base
+    background-color: $light
     border-radius: 10px
     overflow: hidden
     &__img
       width: 100%
       height: 275px
       object-fit: cover
-    &__title    
+    &__title         
+      width: 100%
+      display: block
+      padding: 15px 25px 30px
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
@@ -96,7 +212,11 @@
       line-height: 25px
       color: $grey100
   &-item
+    background-color: $light
+    border-radius: 10px
+    padding: 25px 25px 30px
     &__title
+      margin: 0
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
@@ -104,12 +224,14 @@
       line-height: 25px
       color: $grey100
     &__text
+      margin: 5px 0 0 0
       font-style: normal
       font-weight: normal
       font-size: 14px
       line-height: 20px
       color: $grey85
     &__date
+      margin: 10px 0 0 0
       font-style: normal
       font-weight: normal
       font-size: 12px
@@ -119,19 +241,57 @@
     background: $greyblue75
     border-radius: 10px
     overflow: hidden
+    display: grid
+    grid-template-areas: "title title title" "left article1 right" "left article2 right" "left article3 right" "footer footer footer"
+    grid-template-rows: 60px 1fr 1fr 1fr 45px
+    grid-template-columns: 24px 1fr 24px
     &__category
+      grid-area: title
+      padding: 20px 25px
       font-size: 14px
       line-height: 20px
       letter-spacing: 0.5px
       text-transform: uppercase
-      color: $base
-    &__title
+      color: $base      
+      border-bottom: 1px solid $greyblue50
+    &__title      
+      margin: 0
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
       font-size: 20px
       line-height: 25px
       color: $base
+      text-decoration: none
+      position: relative
+      z-index: 1
+      &:before  
+        content: url('../img/infobox/Quote.svg')
+        position: absolute
+        top: -10px
+        left: -10px
+        z-index: -1
+    &__article
+      width: 100%
+      border-bottom: 1px solid $greyblue50
+      padding-top: 45px
+      padding-left: 10px
+      padding-bottom: 30px
+      &-one
+        grid-area: article1 
+      &-two
+        grid-area: article2 
+      &-three
+        grid-area: article3 
+        border-bottom: 1px solid transparent    
+    &__left
+      grid-area: left
+    &__right
+      grid-area: right 
+    &__author
+      margin-top: 15px     
+      display: flex
+      align-items: center 
     &__avatar
       width: 45px
       height: 45px
@@ -150,11 +310,19 @@
       line-height: 15px
       color: $greyblue25
     &__footer
+      grid-area: footer
+      padding-top: 11px
+      text-align: center
+      font-weight: bold
       font-size: 14px
       line-height: 20px
-      text-align: center
       color: $base
-
+      border-top: 1px solid $greyblue50
+.author
+  &__info
+    display: flex
+    flex-direction: column
+    margin-left: 10px
 .counters
   &__number
     font-style: normal
@@ -171,7 +339,9 @@
     mix-blend-mode: normal
     opacity: 0.4
   &__comment
+    opacity: 0.6
     &-number
+      margin-left: 6px
       font-style: normal
       font-weight: normal
       font-size: 12px
@@ -180,7 +350,9 @@
       mix-blend-mode: normal
       opacity: 0.4
   &__like
+    opacity: 0.4
     &-number  
+      margin-left: 6px
       font-style: normal
       font-weight: normal
       font-size: 12px
@@ -189,13 +361,20 @@
       mix-blend-mode: normal
       opacity: 0.4
 .popular
+  position: absolute
+  z-index: 10
+  top: 18px
+  left: 18px
   padding: 5px 12px
   background: $green75
   border-radius: 3px
+  font-weight: bold
   font-size: 12px
   line-height: 15px
-  color: $base
-
+  color: $light
+.like, .comment
+  display: flex
+  align-items: center
 
 
 
