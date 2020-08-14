@@ -1,0 +1,159 @@
+.page
+  padding-top: 60px
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-list
+    list-style-type: none
+    padding: 0
+    margin: 0
+    border-radius: 10px
+    overflow: hidden
+    background-color: $light
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &-column  
+    min-width: 263px
+    list-style-type: none
+    padding: 0
+    margin: 0
+    border-radius: 10px
+    overflow: hidden
+    background-color: $light
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &__title
+      margin: 0
+      padding: 20px 25px
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      color: $grey100
+      border-bottom: 1px solid $grey15
+    &__item
+      padding: 17px 25px
+      display: flex
+      position: relative
+      &:not(:nth-last-child(2))
+        &:after                      
+          content: ""
+          position: absolute
+          bottom: 0
+          left: 25px
+          right: 25px
+          height: 1px
+          background-color: $grey15
+      &-title
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 20px
+        color: $grey85
+        margin-bottom: 5px
+      &-time
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        color: $grey50
+    &__img
+      width: 60px
+      height: 60px
+      object-fit: cover
+    &__text
+      margin-left: 10px
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start 
+    &__footer
+      font-weight: bold
+      font-size: 14px
+      line-height: 20px
+      color: $grey100 
+    &-footer  
+      border-top: 1px solid $grey15 
+      padding-top: 11px
+      padding-bottom: 14px  
+      display: flex
+      justify-content: center
+      align-items: center      
+.list
+  &-item
+    padding: 25px
+    display: flex
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 25px
+      right: 25px      
+      height: 1px
+      background-color: $grey15
+    &__img
+      display: block
+      margin-right: 25px  
+      width: 336px
+      min-height: 100%
+      object-fit: cover      
+    &__category  
+      font-size: 12px
+      line-height: 15px
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      &-blue75
+        color: #4592FF
+      &-bluegreen75
+        color: $blugreen75
+      &-red75 
+        color: $red75  
+      &-purple75  
+        color: $purple75 
+    &__title
+      font-family: 'Roboto Slab', serif
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      color: $grey100
+    &__text
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: $grey85
+    &__counters
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $grey50
+    &__date
+      margin-right: 10px
+    &__comment
+      margin-right: 10px 
+      display: flex
+      align-items: start
+    &__like
+      display: flex
+      align-items: start    
+    &__number
+      margin-left: 5px   
+.bookmark
+  position: absolute
+  right: 25px
+  top: 25px    
+  &-red path
+    fill: $red75
+  &-container
+    cursor: pointer  
+.column
+  margin-left: 29px    
