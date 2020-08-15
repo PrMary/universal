@@ -40,24 +40,47 @@ $(document).ready(function () {
         l.removeClass("modal__dialog--visible"));
     });
 
-  $('.bookmark').each(function () {
+  //закладки в секции page
+  $(".bookmark").each(function () {
     var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-    $.get(imgURL, function (data) {
-      var $svg = $(data).find('svg');
-      if (typeof imgClass !== 'undefined') {
-        $svg = $svg.attr('class', imgClass + ' replaced-svg');
-      }
-      $svg = $svg.removeAttr('xmlns:a');
-      if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-        $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-      }
-      $img.replaceWith($svg);
-    }, 'xml');
+    var imgClass = $img.attr("class");
+    var imgURL = $img.attr("src");
+    $.get(
+      imgURL,
+      function (data) {
+        var $svg = $(data).find("svg");
+        if (typeof imgClass !== "undefined") {
+          $svg = $svg.attr("class", imgClass + " replaced-svg");
+        }
+        $svg = $svg.removeAttr("xmlns:a");
+        if (
+          !$svg.attr("viewBox") &&
+          $svg.attr("height") &&
+          $svg.attr("width")
+        ) {
+          $svg.attr(
+            "viewBox",
+            "0 0 " + $svg.attr("height") + " " + $svg.attr("width")
+          );
+        }
+        $img.replaceWith($svg);
+      },
+      "xml"
+    );
   });
 
   $(".bookmark-container").on("click", function () {
     $(this).children(".bookmark").toggleClass("bookmark-red");
+  });
+
+  //slider
+  var mySwiper = new Swiper(".swiper-container", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
   });
 });

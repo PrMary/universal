@@ -1,0 +1,211 @@
+.hot
+  padding-top: 60px
+  padding-bottom: 60px
+  background-color: $grey100
+  &-wrapper
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr 
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 30px
+  &-slider
+    grid-row: 1 / 4
+    grid-column: 1 / 3
+    border-radius: 10px
+    overflow: hidden    
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      z-index: -2
+      top: 0
+      left: 0
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+    &__title
+      margin-top: 30px
+      text-align: center
+      font-family: 'Roboto Slab', serif
+      font-style: normal
+      font-weight: bold
+      font-size: 40px
+      line-height: 50px
+      color: $light
+      & a 
+        color: inherit
+    &__avatar
+      width: 45px
+      height: 45px
+      object-fit: cover
+      border-radius: 50% 
+    &__author
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center  
+    &__name
+      margin-top: 8px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: $light
+      mix-blend-mode: normal
+      opacity: 0.85
+    &__job
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $light
+      mix-blend-mode: normal
+      opacity: 0.4
+  &__pin
+    position: absolute
+    top: 18px
+    left: 18px
+    padding: 5px 12px
+    font-size: 12px
+    line-height: 15px
+    color: $light
+    background-color: $red75
+    border-radius: 3px
+  &-careers
+    grid-row: 1 / 3
+    grid-column: 3 / 5
+    height: 370px
+    background-color: $greyblue50
+    border-radius: 10px
+    overflow: hidden
+    position: relative
+    z-index: 0
+    &__info
+      width: 63%
+      padding: 35px 35px 50px           
+    &__category
+      margin-bottom: 20px
+      font-size: 12px
+      line-height: 15px
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      color: $greyblue75
+    &__title
+      margin-top: 0
+      margin-bottom: 15px
+      font-family: Roboto Slab
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      color: $grey100
+      & a
+        color: inherit
+    &__text
+      margin-bottom: 25px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: $grey85
+    &__img
+      position: absolute
+      z-index: -1
+      top: 18px
+      right: 57px
+      object-fit: cover
+
+  &-coffee
+    grid-row: 3 / 4
+    grid-column: 3 / 4
+  &-manufacture
+    grid-row: 3 / 4
+    grid-column: 4 / 5 
+  &-item
+    background-color: $light
+    border-radius: 10px
+    padding: 25px 25px 30px
+    &__title
+      margin: 0
+      font-family: 'Roboto Slab', serif
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 25px
+      color: $grey100
+    &__text
+      margin: 5px 0 0 0
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: $grey85
+    &__date
+      margin: 10px 0 0 0
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $grey50      
+.swiper
+  &-container 
+    width: 100%
+    height: 100%
+  &-pagination
+    &-bullet 
+      width: 8px
+      height: 8px
+      text-align: center
+      opacity: 1
+      background: $grey85
+      &-active 
+        color: $light
+        background: $light
+        position: relative
+        &:before
+          content: " "
+          position: absolute
+          border: 2px solid $light
+          border-top-color: red
+          width: 18px
+          height: 18px
+          border-radius: 50%
+          position: relative
+      &-active    
+        &:before
+          content: " "
+          position: absolute
+          left: -8px
+          top: -7px
+          border-top-color: $grey85
+      &-active
+        transform: rotate(30deg)
+        &:before
+          transform: rotate(-70deg)    
+        
+  &-slide
+    position: relative 
+    padding: 50px 
+    &:after
+      content: ""
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
+.oval
+  position: absolute
+  z-index: -2
+  bottom: 45px
+  right: 30px
+  width: 260px
+  height: 260px
+  background-color: $greyblue25  
+  border-radius: 50%    
+    
