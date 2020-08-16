@@ -89,13 +89,18 @@
       font-size: 14px
       line-height: 20px
       color: $grey100 
-    &-footer  
       border-top: 1px solid $grey15 
-      padding-top: 11px
-      padding-bottom: 14px  
-      display: flex
-      justify-content: center
-      align-items: center   
+      &-link
+        width: 100%
+        height: 100%
+        padding-top: 11px
+        padding-bottom: 14px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: inherit  
+        &:hover
+          background: $hovercard     
   &-img
     &__link
       display: block
@@ -139,6 +144,8 @@
       &-purple75  
         color: $purple75 
     &__title
+      margin-top: 15px
+      margin-bottom: 0
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
@@ -151,10 +158,12 @@
         &:hover
           border-bottom: 1px solid $grey100 
     &__text
+      margin-top: 10px
+      margin-bottom: 20px
       font-style: normal
       font-weight: normal
       font-size: 14px
-      line-height: 20px
+      line-height: 143%
       color: $grey85
     &__counters
       display: flex

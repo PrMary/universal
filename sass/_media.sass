@@ -1,36 +1,38 @@
 @media (max-width: 1200px)
-  .hot
+  .footer
     display: none
   .subscribe
     display: none
-  .footer
+  .slider
     display: none    
   .container
     max-width: 960px 
   .content
-    width: 75%
+    width: 65%
+    &-info
+      top: 170px
+  .selection
+    height: 500px  
   .tabs
-    width: 25%   
+    width: 35%  
+    &__title
+      padding-top: 10px
+      padding-bottom: 10px
+    &-item
+      padding-top: 10px 
   .article
-    &-card
-      overflow: hidden
-      text-overflow: ellipsis
+    padding-top: 20px
+    padding-bottom: 20px
+    &__item
+      padding-right: 20px
+      padding-left: 20px
     &__title
       font-size: 14px
-      line-height: 20px
-  .tabs
-    &__title
-      padding: 15px
-    &-item
-      padding: 15px   
-      &__text
-        margin-bottom: 0 
-        font-size: 13px
-        line-height: 18px
+    &__img
+      margin-left: 10px  
   .infobox
     &-wrapper
-      height: 970px
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
       grid-template-columns: 1fr 1fr 1fr
       grid-gap: 30px
     &__cars
@@ -46,25 +48,21 @@
       grid-row: 5 / 6
       grid-column: 1 / 2
     &__stressful
-      grid-row: 5 / 6
-      grid-column: 3 / 4
+      grid-row: 6 / 7
+      grid-column: 1 / 2
     &__manufacture
       grid-row: 5 / 6
       grid-column: 2 / 3
     &__lemon
-      display: none  
+      grid-row: 6 / 7
+      grid-column: 2 / 3  
     &__columns
       grid-row: 1 / 5
       grid-column: 3 / 4    
-    &-cars
-      &__img
-        width: 48%
-      &__info
-        width: 50% 
+    
   .flowering
     &__title
       font-size: 38px
-      line-height: 48px
 @media (max-width: 1005px)
   .container
     max-width: 800px  
@@ -82,20 +80,35 @@
       &__text
         display: none
   .article
-    padding: 15px 15px 15px 15px
-    height: auto
-    &__title
-      font-size: 12px
-      line-height: 15px
-    &__img
-      width: 55px
-      height: 55px
-      margin-left: 10px      
+    flex-wrap: wrap 
+    padding-bottom: 0    
+    &__item
+      width: 50%
+      margin-bottom: 25px 
+      &:not(:nth-last-child(even))   
+        &:after                      
+          content: ""
+          position: absolute
+          bottom: 0px
+          top: 0px
+          right: 0px
+          width: 1px
+          background-color: $grey95
   .divider
     margin-left: 15px
     margin-right: 15px
     height: 55px
   .content
+    width: 60%
+    &-info
+      &__title
+        font-size: 30px
+        margin-bottom: 60px
+  .selection
+    height: 500px  
+  .tabs
+    width: 40%
+
     &-info
       &__title
         font-size: 30px
@@ -107,7 +120,25 @@
       display: none
   .list
     width: 100%    
+  .infobox
+    &-cars
+      &__info
+        width: 52%
+      &__img
+        width: 48%    
 @media (max-width: 992px)
+  .button
+    &:hover      
+      background: $blue75
+  .infobox
+    &-card
+      &:hover
+        box-shadow: 0 0 6px 3px transparent
+        cursor: pointer  
+    &-columns
+      &__footer
+        &:hover
+          background: transparent    
   .page
     &-column
       &__link
@@ -120,13 +151,38 @@
         &-link
           &:hover
             border-bottom: 1px solid transparent      
-            text-decoration: none          
+            text-decoration: none  
+  .page
+    &-column
+      &__footer
+        &-link
+        &:hover
+          background: $light
   .navbar
     &-menu
       &__link
         &:hover
           border-bottom: 1px solid transparent
-          text-decoration: none            
+          text-decoration: none          
+  .article
+    &-link
+      &:hover
+        background: transparent
+  .content
+    &-info
+      &__link
+        &:hover      
+          border-bottom: 1px solid transparent
+  .player
+    &__icon
+      &:hover
+        background-color: transparent 
+  .tabs
+    &-item
+      &__text
+        &-video
+          &:hover
+            background-color: transparent                   
 @media (max-width: 880px)
   .container
     max-width: 700px  
@@ -141,7 +197,7 @@
       left: 0
       right: 0
       top: 0
-      z-index: 100  
+      z-index: 500  
   .navbar
     display: none
     position: fixed
@@ -163,68 +219,65 @@
       align-items: center  
       &__item
         margin-bottom: 15px  
-  .section
-    &__text
-      display: none   
+  .tabs
+    width: 47%
+  .content
+    width: 53%  
+    &-info
+      &__title
+        margin-bottom: 30px
+  .button
+    &-block
+      flex-direction: column
+      align-items: flex-start  
+  .player
+    &__icon
+      margin-left: 0    
+      margin-top: 10px
   .recommended
     &__backcolor
-      height: 400px
-  .tabs
-    &__title
-      padding: 8px
-    &-item
-      padding: 8px   
-      &__text
-        font-size: 12px
-        line-height: 15px 
-        &-video
-          &:after
-            width: 12px
-            height: 12px
-  .selection
-    height: 450px 
-  .content
-    &-info
-      top: 50% 
+      height: 500px  
   .infobox
     &-wrapper
-      height: 1400px
-      grid-template-rows: 1fr 1fr 1fr 1fr 150px 150px 170px
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
       grid-template-columns: 1fr 1fr
-      grid-gap: 30px
+      grid-row-gap: 20px
     &__cars
-      grid-row: 1 / 3
+      grid-row: 5 / 7
       grid-column: 1 / 3    
     &__cat
-      grid-row: 3 / 5
+      grid-row: 1 / 3
       grid-column: 1 / 2
     &__art
       grid-row: 3 / 5
-      grid-column: 2 / 3
+      grid-column: 1 / 2
     &__coffee
       grid-row: 7 / 8
       grid-column: 1 / 2
     &__stressful
-      display: none
+      grid-row: 8 / 9
+      grid-column: 1 / 2
     &__manufacture
       grid-row: 7 / 8
       grid-column: 2 / 3
+    &__lemon
+      grid-row: 8 / 9
+      grid-column: 2 / 3
     &__columns
-      grid-row: 5 / 7
-      grid-column: 1 / 3 
+      grid-row: 1 / 5
+      grid-column: 2 / 3 
     &-columns
-      grid-template-areas: "title title title title title" "left article1 article2 article3 right" "footer footer footer footer footer"
-      grid-template-rows: 60px 1fr 45px
-      grid-template-columns: 24px 1fr 1fr 1fr 24px
-    &-cars
-      &__footer
-        justify-content: flex-start
-      &__excerpt  
-        flex-basis: 100%
-    &-columns
-      grid-gap: 10px
       &__article
-        border-bottom: 1px solid transparent
+        padding: 45px 15px 25px 18px
+      &__author
+        margin-top: 25px  
+      &__title
+        font-size: 22px  
+    &-cars
+      &__info
+        max-width: 50%
+      &__img
+        max-width: 50%      
   .flowering
     &__title
       font-size: 35px
@@ -235,56 +288,42 @@
   .header
     &__subscribe
       display: none
-  .article
-    &__img
-      display: none
+  
   .divider
     height: 45px 
-  .recommended
-    &__backcolor
-      height: 300px
+  
   .selection
-    height: 300px  
+    height: 430px  
   .tabs
+    width: 100% 
+    border-radius: 10px
+    overflow: hidden
     &-item
-      padding: 15px
-      &__text
-        display: none  
-    &__title 
-      font-size: 12px
-      line-height: 15px   
+      &__triangle
+        display: none
+      &--active
+        background-color: transparent  
   .content
-    &__author
-      top: 30px
-      left: 20px
-    &-info
-      top: 35% 
-      left: 20px
-      &__title
-        font-size: 25px
-        margin-bottom: 15px
-        line-height: 35px    
-  .player
-    &__text
-      font-size: 12px
-      line-height: 15px
+    display: none   
+    
   .list
     &-item
       &__link
         min-width: 45%  
       &__category
         font-size: 10px
-        line-height: 12px  
+        line-height: 143% 
       &__title
         font-size: 18px
-        line-height: 20px  
+        line-height: 143%  
       &__text
-        font-size: 12px
-        line-height: 15px  
+        font-size: 14px
+        line-height: 143%  
   .flowering
     &__title
       font-size: 30px
-      line-height: 40px       
+      line-height: 130%   
+       
 @media (max-width: 640px)
   .container
     max-width: 440px 
@@ -298,10 +337,8 @@
     &__logo
       padding-left: 0      
   .article
-    padding: 10px 10px 10px 10px
     &__title
-      font-size: 10px
-      line-height: 14px 
+      font-size: 14px
   .divider
     margin-left: 8px
     margin-right: 8px 
@@ -323,51 +360,49 @@
       margin-left: 0
   .infobox
     &-wrapper
-      grid-gap: 15px
-      height: 1200px
-      grid-template-rows: 1fr 1fr 1fr 1fr 150px 150px 150px
-    &-cars
-      &__title
-        font-size: 20px
-        line-height: 25px
-      &__text
-        font-size: 12px
-        line-height: 15px  
-      &__img
-        height: 250px 
-    &-cat
-      &__title
-        padding: 10px 20px 20px
-        font-size: 14px
-        line-height: 20px
-    &-art
-      &__title
-        width: 98%
-        font-size: 14px
-        line-height: 20px
-      &__counters
-        display: none  
+      grid-template-rows: 170px 170px 170px 170px 1fr 1fr 200px 200px
+      grid-template-columns: 1fr 1fr
+      grid-gap: 25px
+      grid-row-gap: 30px
     &-columns
-      grid-template-areas: "title title title title" "left article1 article2 right" "footer footer footer footer"
-      grid-template-rows: 50px 1fr 45px
-      grid-template-columns: 20px 1fr 1fr 20px    
+      height: 770px
       &__article
-        padding-top: 25px
-        padding-bottom: 15px
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        &-three
-          display: none
-    &-item     
-      padding-top: 20px
+        padding: 35px 0 15px 10px
+      &__author
+        margin-top: 15px  
       &__title
-        font-size: 14px
-        line-height: 20px
+        font-size: 20px  
+    &-cars
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      height: 600px
+      &__info
+        max-width: 100%
+        width: 100%
+        padding-right: 15px
       &__text
-        font-size: 12px
-        line-height: 15px 
+        margin-top: 10px  
+      &__img
+        max-width: 100% 
+        width: 100%
         margin-bottom: 10px
+    &-cat    
+      &__title
+        padding: 10px 10px 20px 
+    &-art
+      align-items: center
+      &__info
+        justify-content: flex-start  
+      &__footer
+        flex-direction: column    
+        align-items: center
+      &__right
+        align-items: center
+      &__avatar
+        margin-bottom: 10px
+      &__author
+        margin-bottom: 10px       
   .list
     &-item
       flex-direction: column 
@@ -379,6 +414,22 @@
     &__video
       width: 440px
       height: 250px
+@media (max-width: 595px)
+  .article
+    &__item
+      width: 100%    
+      &:not(:nth-last-child(odd))   
+        &:after                      
+          content: ""
+          position: absolute
+          bottom: 0px
+          top: 0px
+          right: 0px
+          width: 1px
+          background-color: $grey95
+  .recommended
+    &__backcolor
+      height: 700px
 @media (max-width: 480px)  
   .container  
     max-width: 95%
@@ -389,11 +440,9 @@
   .sign
     &__text
       display: none
-  .tabs
-    &__title
-      display: none  
+   
   .selection
-    height: 270px 
+    height: 500px 
   .modal
     &__video
       width: 400px
@@ -401,38 +450,49 @@
   .flowering
     &__title
       font-size: 28px
-      line-height: 35px    
-@media (max-width: 430px)
+      line-height: 35px 
   .infobox
     &-wrapper
-      height: 1150px
-      grid-template-rows: 1fr 1fr 1fr 1fr 150px 150px 150px
-    &-cars
+      grid-gap: 20px
+      grid-row-gap: 30px  
+@media ( max-width: 450px )
+  .infobox
+    &-wrapper
+      display: flex
+      flex-direction: column
+    &-art
       &__info
-        padding-left: 25px
+        width: 100%
       &__title
-        font-size: 18px
-        line-height: 20px
-      &__text
-        font-size: 12px
-        line-height: 15px  
-      &__img
-        height: 240px   
+        width: 100%
       &__footer
-        padding-left: 25px      
-    &-columns   
+        width: 100%
+        margin-top: 20px
+        flex-direction: row  
+        justify-content: flex-start
+        align-items: center
+      &__right
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start 
+      &__author
+        margin-bottom: 5px  
+    &-columns
+      height: auto
+      min-height: 600px
       &__article
-        padding-top: 20px
-        padding-bottom: 10px
-        padding-left: 0
-    &-item     
-      padding-top: 15px
-      &__text
-        margin-bottom: 0px
-      &__date  
-        margin-top: 0
-        font-size: 10px
-        line-height: 12px         
+        padding-left: 25px
+        padding-right: 25px
+      &__category
+        padding-left: 45px 
+    &-cars
+      height: auto     
+
+              
+@media (max-width: 438px)
+  .selection
+    height: 550px         
+        
 @media (max-width: 390px)  
  
   .search
@@ -442,11 +502,8 @@
       width: 12px
       height: 12px
     &__input
-        font-size: 12px
+      font-size: 12px
 
-  .recommended
-    &__backcolor
-      height: 370px
   .article
     flex-wrap: wrap
     height: auto
@@ -463,20 +520,15 @@
       height: 220px  
 @media ( max-width: 340px )
   .list
-    &-item 
-      &__category
-        font-size: 10px
-        line-height: 12px  
+    &-item   
       &__title
         margin: 10px 0
         font-size: 16px
-        line-height: 18px  
-      &__text
-        font-size: 10px
-        line-height: 12px 
       &__counters
         font-size: 10px
-        line-height: 12px  
+  .article
+    &__img
+      display: none      
         
 
 
