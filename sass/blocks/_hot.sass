@@ -4,7 +4,7 @@
   background-color: $grey100
   &-wrapper
     display: grid
-    grid-template-rows: 1fr 1fr 1fr 
+    grid-template-rows: 170px 170px 1fr 
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-gap: 30px
   &-slider
@@ -32,7 +32,7 @@
       font-style: normal
       font-weight: bold
       font-size: 40px
-      line-height: 50px
+      line-height: 125%
       color: $light
       & a 
         color: inherit
@@ -99,7 +99,7 @@
       font-style: normal
       font-weight: bold
       font-size: 25px
-      line-height: 30px
+      line-height: 120%
       color: $grey100
       & a
         color: inherit
@@ -108,14 +108,16 @@
       font-style: normal
       font-weight: normal
       font-size: 14px
-      line-height: 20px
+      line-height: 143%
       color: $grey85
     &__img
+      width: 248px
+      height: 352px
+      object-fit: cover
       position: absolute
       z-index: -1
-      top: 18px
+      bottom: 0
       right: 57px
-      object-fit: cover
 
   &-coffee
     grid-row: 3 / 4
@@ -127,20 +129,23 @@
     background-color: $light
     border-radius: 10px
     padding: 25px 25px 30px
+    &:hover
+      cursor: pointer
+      box-shadow: 0 0 6px 3px $hovercard
     &__title
       margin: 0
       font-family: 'Roboto Slab', serif
       font-style: normal
       font-weight: bold
       font-size: 16px
-      line-height: 25px
+      line-height: 156%
       color: $grey100
     &__text
       margin: 5px 0 0 0
       font-style: normal
       font-weight: normal
       font-size: 14px
-      line-height: 20px
+      line-height: 143%
       color: $grey85
     &__date
       margin: 10px 0 0 0
@@ -148,7 +153,23 @@
       font-weight: normal
       font-size: 12px
       line-height: 15px
-      color: $grey50      
+      color: $grey50   
+  &-button
+    display: flex
+    align-items: center
+    &__img
+      margin-right: 11px
+    &__text
+      font-size: 14px
+      line-height: 143%
+      color: $light
+    &__number
+      margin-left: 5px  
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 143%
+      color: $blue25
 .swiper
   &-container 
     width: 100%

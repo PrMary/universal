@@ -2,9 +2,7 @@
   .footer
     display: none
   .subscribe
-    display: none
-  .slider
-    display: none    
+    display: none  
   .container
     max-width: 960px 
   .content
@@ -126,6 +124,19 @@
         width: 52%
       &__img
         width: 48%    
+  .hot
+    &-careers
+      &__img
+        width: 200px
+        height: 304px
+        bottom: 0        
+        right: 0
+      &__info 
+        width: 70%
+        padding: 35px 30px 20px
+  .oval
+    bottom: 0
+    right: 0      
 @media (max-width: 992px)
   .button
     &:hover      
@@ -139,6 +150,10 @@
       &__footer
         &:hover
           background: transparent    
+  .hot
+    &-item
+      &:hover
+        box-shadow: 0 0 6px 3px transparent
   .page
     &-column
       &__link
@@ -281,7 +296,35 @@
   .flowering
     &__title
       font-size: 35px
-      line-height: 45px      
+      line-height: 45px  
+  .hot
+    &-wrapper
+      grid-template-rows: 170px 170px 170px 170px 170px 1fr
+      grid-template-columns: 1fr 1fr
+      grid-gap: 30px
+    &-slider
+      grid-row: 1 / 4
+      grid-column: 1 / 3
+    &-careers
+      grid-row: 4 / 6
+      grid-column: 1 / 3
+      &__img
+        width: 248px
+        height: 352px
+        bottom: 0        
+        right: 58px
+      &__info 
+        width: 50%
+        padding: 35px 35px 20px
+  .oval
+    bottom: 30px
+    right: 45px
+    &-coffee
+      grid-row: 6 / 7
+      grid-column: 1 / 2
+    &-manufacture
+      grid-row: 6 / 7
+      grid-column: 2 / 3
 @media (max-width: 768px)
   .container
     max-width: 600px
@@ -402,7 +445,20 @@
       &__avatar
         margin-bottom: 10px
       &__author
-        margin-bottom: 10px       
+        margin-bottom: 10px 
+  .hot
+    &-careers
+      &__img
+        width: 200px
+        height: 304px
+        bottom: 0        
+        right: 0
+      &__info 
+        width: 70%
+        padding: 35px 30px 20px
+  .oval
+    bottom: 0
+    right: 0             
   .list
     &-item
       flex-direction: column 
@@ -487,7 +543,22 @@
         padding-left: 45px 
     &-cars
       height: auto     
-
+  .hot
+    &-wrapper
+      display: flex
+      flex-direction: column
+    &-careers
+      &__info
+        width: 72%
+      &__category
+        margin-bottom: 15px
+      &__title
+        font-size: 25px
+      &__text
+        font-size: 12px
+    &-slider
+      &__title
+        font-size: 38px     
               
 @media (max-width: 438px)
   .selection
@@ -518,6 +589,16 @@
     &__video
       width: 370px
       height: 220px  
+  .hot
+    &-careers
+      height: 450px
+      &__info
+        width: 100% 
+      &__text
+        width: 55% 
+    &-slider
+      &__title
+        font-size: 33px 
 @media ( max-width: 340px )
   .list
     &-item   
