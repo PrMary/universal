@@ -445,7 +445,7 @@
               >
               <p class="tabs-item__text">
                 For Chicken-Fried Steak, Too Much Is Just Enough
-                <span class="tabs-item__text-video"></span>
+                <span data-toggle="modal" class="tabs-item__text-video"></span>
               </p>
 
               <div
@@ -479,7 +479,7 @@
               >
               <p class="tabs-item__text">
                 11 surprising stat rankings for active NFL players
-                <span class="tabs-item__text-video"></span>
+                <span data-toggle="modal" class="tabs-item__text-video"></span>
               </p>
               <div class="tabs-item__triangle"></div>
             </li>
@@ -1325,7 +1325,7 @@
 
     <section class="subscribe">
       <div class="container subscribe-wrapper">
-        <h2 class="subscribe__title">Subscribe now and get 20% off</h2>
+        <h2 class="subscribe__title">Subscribe now and get 20%&nbsp;off</h2>
         <form
           action="send.php"
           method="POST"
@@ -1333,8 +1333,9 @@
         >
           <div class="input-group">
             <input
-              type="email"
-              class="subscribe__input"
+              type="text"
+              class="subscribe__input .email"
+              id="email"
               placeholder="Enter your email"
               name="email"
               required
@@ -1456,52 +1457,59 @@
         </div>
         <!-- /.footer-menu -->
         <div class="footer-contact">
-          <div class="footer-contact__left">
-            <a href="index.html" class="footer-contact__logo">
-              <img
-                src="img/footer/UNV.svg"
-                alt="logo"
-                class="footer-contact__logo-img"
-              />
-            </a>
-            <ul class="footer-contact__menu">
-              <li class="footer-contact__item">
-                <a href="#" class="footer-contact__link">Contact Us</a>
-              </li>
-              <li class="footer-contact__item">
-                <a href="#" class="footer-contact__link">Work with Us</a>
-              </li>
-              <li class="footer-contact__item">
-                <a href="#" class="footer-contact__link">Advertise</a>
-              </li>
-              <li class="footer-contact__item">
-                <a href="#" class="footer-contact__link">Your Ad Choise</a>
-              </li>
-            </ul>
-          </div>
+          <a href="index.html" class="footer-contact__logo">
+            <img
+              src="img/footer/UNV.svg"
+              alt="logo"
+              class="footer-contact__logo-img"
+            />
+          </a>
+
+          <ul class="footer-contact__menu">
+            <li class="footer-contact__item">
+              <a href="#" class="footer-contact__link">Contact Us</a>
+            </li>
+            <li class="footer-contact__item">
+              <a href="#" class="footer-contact__link">Work with Us</a>
+            </li>
+            <li class="footer-contact__item">
+              <a href="#" class="footer-contact__link">Advertise</a>
+            </li>
+            <li class="footer-contact__item">
+              <a href="#" class="footer-contact__link">Your Ad Choise</a>
+            </li>
+          </ul>
           <div class="footer-contact__social">
-            <a href="#" class="facebook">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="facebook"
+            >
               <img
                 src="img/footer/Facebook.svg"
                 alt="facebook"
                 class="facebook__img"
               />
             </a>
-            <a href="#" class="twitter">
+            <a href="https://twitter.com/" target="_blank" class="twitter">
               <img
                 src="img/footer/Twitter.svg"
                 alt="twitter"
                 class="twitter__img"
               />
             </a>
-            <a href="#" class="youtube">
+            <a href="https://www.youtube.com/" target="_blank" class="youtube">
               <img
                 src="img/footer/YouTube.svg"
                 alt="youtube"
                 class="youtube__img"
               />
             </a>
-            <a href="#" class="instagram">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="instagram"
+            >
               <img
                 src="img/footer/Instagram.svg"
                 alt="instagram"
@@ -1543,6 +1551,7 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/inputmask.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -79,8 +79,11 @@ $(document).ready(function () {
     direction: "horizontal",
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
+    },
+    autoplay: {
+      delay: 5000,
     },
   });
 
@@ -95,8 +98,7 @@ $(document).ready(function () {
         },
         email: {
           required: "We need your email address to contact you",
-          email:
-            "Your email address must be in the format of name@domain.com",
+          email: "Your email address must be in the format of name@domain.com",
         },
         phone: {
           required: "Please specify your phone number",
@@ -105,4 +107,6 @@ $(document).ready(function () {
       },
     });
   });
+
+  $("#email").inputmask("email");
 });
