@@ -1,13 +1,6 @@
 @media (max-width: 1200px)
    
-  .sharing
-    display: none
-  .gallery
-    display: none
-  .comments
-    display: none
-  .submit
-    display: none      
+        
   .container
     max-width: 960px 
   .content
@@ -162,7 +155,15 @@
   .article 
     &-photo
       &__text
-        padding: 15px 10px         
+        padding: 15px 10px  
+  .gallery
+    padding-bottom: 30px
+    &-block
+      flex-wrap: wrap 
+      &__item
+        flex: none
+        width: 45%    
+        margin-bottom: 30px       
 @media (max-width: 992px)
   .main
     &-container
@@ -689,7 +690,12 @@
   .aside    
     &-column
       float: none
-      margin-left: 0    
+      margin-left: 0  
+  .gallery
+    &-block
+      &__item
+        width: 100%    
+        margin-bottom: 40px    
 @media (max-width: 595px)
   
   .recommended
@@ -801,7 +807,12 @@
       &--prev
         left: 25px
       &--next
-        right: 25px            
+        right: 25px   
+  .gallery
+    &-block
+      &__item
+        width: 100%    
+        margin-bottom: 30px               
 @media (max-width: 390px)  
  
   .search
