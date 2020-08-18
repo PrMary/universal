@@ -1,8 +1,5 @@
 @media (max-width: 1200px)
-  .aside
-    display: none
-  .article-quote
-    display: none  
+   
   .sharing
     display: none
   .gallery
@@ -451,7 +448,13 @@
       &__button
         width: 45px
         height: 45px     
-        border-radius: 50%  
+        border-radius: 50% 
+  .aside    
+    &-column
+      position: relative
+      bottom: auto
+      right: auto
+      float: right         
 @media (max-width: 768px)
   .container
     max-width: 600px
@@ -657,6 +660,7 @@
     &-author
       float: none 
       margin: auto
+
   .article
     &-slider
       height: 350px
@@ -681,6 +685,11 @@
         display: flex
         justify-content: flex-start
         align-items: center
+
+  .aside    
+    &-column
+      float: none
+      margin-left: 0    
 @media (max-width: 595px)
   
   .recommended
