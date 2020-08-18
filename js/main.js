@@ -87,26 +87,46 @@ $(document).ready(function () {
     },
   });
 
-  //validation
-  $(".form").each(function () {
-    $(this).validate({
-      errorClass: "invalid",
-      messages: {
-        name: {
-          required: "Please specify your name",
-          minlength: "Name must be at least 2 characters long",
-        },
-        email: {
-          required: "We need your email address to contact you",
-          email: "Your email address must be in the format of name@domain.com",
-        },
-        phone: {
-          required: "Please specify your phone number",
-          minlength: "Please specify your phone number",
-        },
-      },
-    });
-  });
+  $(function () {
+    $(".subscribe__button").on("click", validate);
 
-  $("#email").inputmask("email");
+    // Validate email
+    function validateEmail(email) {
+      var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    // send form
+    function sendForm() {
+      var msg = $(".subscribe - form").serialize();
+      $.ajax({
+        type: 'POST',
+        url: 'send.php', // Обработчик собственно
+        data: msg,
+        success: function (data) {
+          var url = "thankyou.html";
+          $(location).attr('href', url);
+        },
+        error: function () {
+          alert('Ошибка!');
+        }
+      });
+    }
+
+    // validate email and send form after success validation
+    function validate() {
+      var email = $(".email").val();
+      var $error = $(".error");
+      $error.text("");
+
+      if (validateEmail(email)) {
+        $error.fadeOut();
+        sendForm();
+      } else {
+        $error.fadeIn();
+        $error.text(email + " is not valid");
+      }
+      return false;
+    }
+  });
 });

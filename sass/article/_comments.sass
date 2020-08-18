@@ -1,0 +1,146 @@
+.comments
+  padding-top: 90px
+  padding-bottom: 30px
+  background: $light
+  &-wrapper
+    max-width: 750px
+    margin-left: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+  &-title
+    display: flex
+    justify-content: space-between
+    align-items: center  
+  &__title
+    font-family: 'Roboto Slab', serif
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 125%
+    color: $grey100
+  &__count
+    font-style: normal
+    font-weight: normal
+    font-size: 40px
+    line-height: 125%
+    text-transform: uppercase
+    color: $grey50
+  &-add
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: transparent
+    border: 1px solid $grey15
+    border-radius: 20px
+    &__text
+      margin-left: 11px
+      font-weight: bold
+      font-size: 14px
+      line-height: 143%
+      color: $grey100
+  &__comment    
+    padding-top: 20px
+    padding-bottom: 30px
+    border-top: 1px solid $grey15
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &-hidden
+      display: none
+  &__answer
+    padding-left: 90px
+  &-author
+    display: block
+    flex-shrink: 0
+    margin-right: 15px
+    width: 75px
+    height: 75px
+    border-radius: 50%
+    overflow: hidden
+  &__avatar
+    width: 100%
+    height: 100%
+    object-fit: cover 
+  &__info
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+  &__name
+    font-family: 'Roboto Slab', serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 156%
+    color: $grey100
+  &__date  
+    margin-left: 10px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 125%
+    color: $grey50
+  &__text
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 167%
+    color: $grey85
+  &-buttons
+    display: flex
+    justify-content: flex-start
+    align-items: center  
+  &-reply
+    padding: 0
+    background: $light
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__like
+    padding: 0
+    background: $light
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__dislike
+    padding: 0
+    background: $light
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__number
+    margin-left: 10px
+    margin-right: 10px
+    font-weight: bold
+    font-size: 12px
+    line-height: 125%
+    color: $grey50
+    &-green
+      color: $green75
+    &-red
+      color: $red75  
+  &-load
+    width: 100%
+    height: 50px
+    background: $light
+    border: 1px solid $grey15
+    border-radius: 25px
+    
+.reply
+  margin-right: 15px
+  &__text
+    margin-left: 5px
+    font-weight: bold
+    font-style: normal
+    font-size: 12px
+    line-height: 125%
+    color: $grey100
+.load
+  &__text
+    margin-left: 10px    
+    font-weight: bold
+    font-size: 14px
+    line-height: 143%
+    color: $grey100

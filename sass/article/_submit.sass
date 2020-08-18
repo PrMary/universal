@@ -1,0 +1,63 @@
+.submit
+  background: $light
+  padding-top: 30px
+  padding-bottom: 30px
+  &-form
+    padding: 30px 40px 45px 30px
+    width: 100%
+    background: $grey05
+    border-radius: 10px
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  &__avatar
+    margin-right: 20px
+    width: 75px
+    height: 75px
+    object-fit: cover
+    border-radius: 50%      
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 10px 12px 10px 0
+      border-color: transparent $light transparent transparent 
+      position: absolute
+      left: 95px
+      top: 39px
+      transform: translate(-100%, -50%)
+      z-index: 100
+        
+  &__title
+    margin-top: 0
+    margin-bottom: 15px
+    margin-left: 100px
+    font-family: 'Roboto Slab', serif
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 125%
+    color: $grey100
+  &__button
+    margin-left: 100px      
+  &__textarea
+    resize: none
+    border: none
+    outline: none
+    margin-bottom: 25px
+    width: 595px
+    height: 130px
+    border-radius: 10px
+    overflow: hidden
+    
+      
+    
+    

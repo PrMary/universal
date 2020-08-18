@@ -7,14 +7,22 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $email = $_POST['email'];
+$message = $_POST['message'];
 
-
-// Формирование самого письма
+if (!empty($email)) {
+    // Формирование самого письма
 $title = "New message from Universal";
 $body = "
 <h2>New message</h2>
 <b>Email:</b> $email
-";
+";}
+else {
+    // Формирование самого письма
+$title = "New message from Universal";
+$body = "
+<h2>New message</h2>
+<b>Message: </b> $message
+";}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -41,6 +49,8 @@ $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;    
 
+
+
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
 else {$result = "error";}
@@ -50,5 +60,13 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
+if (!empty($email)) {
 // Отображение результата
 header('Location: thankyou.html');
+}
+else {
+// Отображение результата
+header('Location: thankyou-travel.html');
+}
+header('Location: thankyou-travel.html');
+

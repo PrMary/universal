@@ -1,5 +1,6 @@
 .main
-  padding: 60px 210px
+  padding-top: 60px
+  padding-bottom: 60px
   position: relative
   &__img
     width: 100%
@@ -21,14 +22,13 @@
     height: 100%
     background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
   &-container 
-    width: 900px
-    margin: auto 
+    max-width: 945px
+    margin: auto
     position: relative
   &-bookmark
     top: 88px
     left: -71px 
   &-info
-    width: 680px
     display: flex
     flex-direction: column
     align-items: flex-start
@@ -54,6 +54,7 @@
       color: $light
     &__text
       width: 556px
+      margin-top: 0
       margin-bottom: 60px
       font-style: normal
       font-weight: normal
@@ -62,6 +63,10 @@
       color: $light
       mix-blend-mode: normal
       opacity: 0.85
+    &__bottom
+      display: flex
+      justify-content: space-between
+      align-items: center  
     &__counters
       display: flex
       justify-content: space-between
@@ -92,13 +97,21 @@
       align-content: center 
 .button
   &-shares
+    width: 145px
+    height: 40px
+    padding: 10px 22px 10px 20px
     border: 1px solid $grey50
     box-sizing: border-box
     border-radius: 20px
-    background: transparent
-    color: $light
+    background: transparent    
+    &:hover
+        background: $hovercard 
     &__text
       margin-left: 11px
+      color: $light
+      font-weight: bold
+      font-size: 14px
+      line-height: 143%
 .jump
   position: absolute
   top: 0
@@ -122,3 +135,4 @@
   &__nextPage
     &-img
       margin-left: 8px    
+     
